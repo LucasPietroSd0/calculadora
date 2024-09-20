@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <style>
+    
+    body{
+      background-image:linear-gradient(45deg,#89fe7b,red);
+    }
+    
+      div{background-color: rgba(0,0,0,0.9);
+        position: absolute;
+        padding: 20px;
+        height:500px;
+        text-align: center;
+        border-radius:10px ;  }
+        
+      button{padding: 10px;
+        width: 50px;
+        height: 50px;
+      }
+  button:hover{
+    background-color:#d4a1a1;
+    color:black;
+  }
+
+#resultado{
+  padding: 20px;
+font-size: 20px;
+  background-color: white;
+  
+}
+  
+  h1{color:white;}
+   }
+    </style>
+    
+  </head>
+  <body>
+  <h1>Turma: M1A<br>
+  aluno: Lucas pietro silva diniz</h1>
+    <div>
+      <h1 id="h1">Calculadora</h1>
+      <p id="resultado"></p>
+      <tr><td>
+        <button class="botao"onclick=clean()>C</button>
+      <button class="botao" onclick=back() ><</button>  
+      <button class="botao" onclick="insert('%')">%</button>
+      <button class="botao" onclick="insert('/')">/</button>
+        </td>
+        <br><br>
+        <tr>
+          <td>
+            <button class="botao" onclick= "insert('7')">7</button>
+      <button class="botao"onclick="insert('8')">8</button>  
+      <button class="botao"onclick="insert('9')">9</button>
+      <button onclick="insert('*')">×</button>
+            </td>
+        <tr>
+          <br><br>
+          <td>
+       <button class="botao"onclick="insert('4')">4</button>
+      <button class="botao"onclick="insert('5')">5</button>  
+      <button class="botao"onclick="insert('6')">6</button>
+      <button onclick="insert('-')">-</button>
+      </td>
+      <tr>
+          <br><br>
+          <td>
+       <button class="botao"onclick="insert('1')">1</button>
+      <button class="botao"onclick="insert('2')">2</button> 
+      <button class="botao"onclick="insert('3')">3</button>
+      <button class="botao"onclick="insert('+')">+</button>
+      </td> <br><br>
+      <button class="botao" onclick="insert('')">+/-</button>
+      <button class="botao" onclick="insert('0')">0</button> 
+      <button class="botao" onclick="insert(',')">,</button>
+      <button class="botao" onclick="calcular()">=</button>
+        </td>  <br> </tr><br>
+        
+    </div>
+    
+    <script>
+
+  
+
+function insert(num)
+{
+var numero = document.getElementById('resultado').innerHTML;
+
+document.getElementById('resultado').innerHTML= numero + num;
+}
+function clean()
+{
+  document.getElementById('resultado').innerHTML = "";
+}
+
+function back()
+{
+  var resultado = document.getElementById('resultado').innerHTML;
+  
+  document.getElementById('resultado').innerHTML =resultado.substring
+  (0,resultado.length -1);
+
+  
+}
+function calcular()
+{
+var resultado=document.getElementById('resultado').innerHTML;
+ if (resultado)
+ {document.getElementById('resultado').innerHTML = eval(resultado);}
+
+else{
+  document.getElementById('resultado').innerHTML = "";
+}}
+
+</script>
+      
+      
+      
+    </script>
+    
+  </body>
+</html>
